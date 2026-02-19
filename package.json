@@ -9,7 +9,9 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": ["onCommand:trp-assist.trp-assist"],
+  "activationEvents": [
+    "onCommand:trp-assist.trp-assist"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -19,14 +21,14 @@
       }
     ],
     "configuration": {
-        "title": "TRP Assist",
-        "properties": {
-          "trp-assist-copilot.youtube.channelId": {
-            "type": "string",
-            "default": "UC06qcorOCPrWwWoGnJS1Evg" 
-          }
+      "title": "TRP Assist",
+      "properties": {
+        "trp-assist-copilot.youtube.channelId": {
+          "type": "string",
+          "default": "UC06qcorOCPrWwWoGnJS1Evg"
         }
       }
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
@@ -47,6 +49,8 @@
     "typescript-eslint": "^8.54.0"
   },
   "dependencies": {
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "ollama": "^0.6.3",
+    "vsce": "^2.15.0"
   }
 }
